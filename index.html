@@ -1,0 +1,3228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="LSB Furniture House & LED Sign Board – Jamui's #1 premium CNC furniture, laser cutting & LED sign board studio. Bold designs, luxury quality."
+    />
+    <title>LSB – Premium LED Sign Boards & CNC Furniture | Jamui, Bihar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <style>
+      /* ─── TOKENS ─────────────────────────────── */
+      :root {
+        --black: #090909;
+        --dark: #111111;
+        --dark2: #181818;
+        --dark3: #1f1f1f;
+        --orange: #ff5c00;
+        --orange2: #ff8533;
+        --orange3: rgba(255, 92, 0, 0.12);
+        --gold: #f5c842;
+        --gold2: #fada6e;
+        --red: #e8002e;
+        --white: #ffffff;
+        --off: #f0f0f0;
+        --muted: rgba(255, 255, 255, 0.5);
+        --muted2: rgba(255, 255, 255, 0.7);
+        --glass: rgba(255, 255, 255, 0.04);
+        --glassb: rgba(255, 255, 255, 0.09);
+        --radius: 16px;
+        --radius-sm: 10px;
+        --sh-gold: 0 8px 32px rgba(245, 200, 66, 0.3);
+        --sh-org: 0 8px 36px rgba(255, 92, 0, 0.38);
+        --tr: 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      /* ─── RESET ──────────────────────────────── */
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        font-size: 16px;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        background: var(--black);
+        color: var(--white);
+        overflow-x: hidden;
+        line-height: 1.65;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      ul {
+        list-style: none;
+      }
+      button {
+        font-family: "Poppins", sans-serif;
+        cursor: pointer;
+      }
+
+      /* ─── SCROLLBAR ───────────────────────────── */
+      ::-webkit-scrollbar {
+        width: 5px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--black);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--orange);
+        border-radius: 4px;
+      }
+
+      /* ─── LAYOUT ──────────────────────────────── */
+      .wrap {
+        width: 92%;
+        max-width: 1260px;
+        margin: 0 auto;
+      }
+
+      /* ─── REVEAL ──────────────────────────────── */
+      [data-r] {
+        opacity: 0;
+        transform: translateY(32px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      [data-r="l"] {
+        transform: translateX(-40px);
+      }
+      [data-r="r"] {
+        transform: translateX(40px);
+      }
+      [data-r="s"] {
+        transform: scale(0.93);
+      }
+      [data-r].on {
+        opacity: 1;
+        transform: none;
+      }
+      [data-d="1"] {
+        transition-delay: 0.1s;
+      }
+      [data-d="2"] {
+        transition-delay: 0.2s;
+      }
+      [data-d="3"] {
+        transition-delay: 0.3s;
+      }
+      [data-d="4"] {
+        transition-delay: 0.4s;
+      }
+      [data-d="5"] {
+        transition-delay: 0.5s;
+      }
+      [data-d="6"] {
+        transition-delay: 0.6s;
+      }
+
+      /* ─── BUTTONS ─────────────────────────────── */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-size: 0.88rem;
+        letter-spacing: 0.4px;
+        padding: 14px 28px;
+        border-radius: 50px;
+        border: none;
+        transition:
+          transform var(--tr),
+          box-shadow var(--tr),
+          filter var(--tr);
+      }
+      .btn:hover {
+        transform: translateY(-3px);
+      }
+      .btn-orange {
+        background: linear-gradient(135deg, var(--orange), #cc3d00);
+        color: #fff;
+        box-shadow: var(--sh-org);
+      }
+      .btn-orange:hover {
+        box-shadow: 0 14px 44px rgba(255, 92, 0, 0.55);
+      }
+      .btn-gold {
+        background: linear-gradient(135deg, var(--gold), #d4a520);
+        color: #111;
+        box-shadow: var(--sh-gold);
+      }
+      .btn-gold:hover {
+        box-shadow: 0 14px 44px rgba(245, 200, 66, 0.5);
+      }
+      .btn-outline {
+        background: transparent;
+        color: #fff;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+      }
+      .btn-outline:hover {
+        border-color: var(--orange);
+        color: var(--orange);
+        background: var(--orange3);
+      }
+
+      /* ─── LABELS ──────────────────────────────── */
+      .label {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        padding: 7px 18px;
+        border-radius: 50px;
+        margin-bottom: 18px;
+      }
+      .label-orange {
+        background: rgba(255, 92, 0, 0.15);
+        color: var(--orange);
+        border: 1px solid rgba(255, 92, 0, 0.4);
+      }
+      .label-gold {
+        background: rgba(245, 200, 66, 0.12);
+        color: var(--gold);
+        border: 1px solid rgba(245, 200, 66, 0.35);
+      }
+      .label i {
+        font-size: 0.65rem;
+      }
+
+      /* ─── SECTION TITLES ──────────────────────── */
+      .sec-h {
+        font-size: clamp(1.9rem, 4vw, 3rem);
+        font-weight: 800;
+        line-height: 1.12;
+        margin-bottom: 14px;
+      }
+      .sec-h .o {
+        color: var(--orange);
+      }
+      .sec-h .g {
+        color: var(--gold);
+      }
+      .sec-p {
+        color: var(--muted2);
+        font-size: 0.97rem;
+        line-height: 1.82;
+        max-width: 520px;
+      }
+
+      /* ─── DIVIDER LINES ───────────────────────── */
+      .hline {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+      .hline .bar {
+        width: 44px;
+        height: 3px;
+        border-radius: 3px;
+        background: linear-gradient(90deg, var(--orange), var(--gold));
+      }
+      .hline span {
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--orange);
+      }
+
+      /* ══════════════════════════════════════════
+     NAVBAR
+  ══════════════════════════════════════════ */
+      #nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        padding: 20px 0;
+        transition:
+          padding var(--tr),
+          background var(--tr),
+          box-shadow var(--tr);
+      }
+      #nav.stuck {
+        background: rgba(9, 9, 9, 0.96);
+        backdrop-filter: blur(24px);
+        padding: 13px 0;
+        box-shadow: 0 2px 40px rgba(0, 0, 0, 0.6);
+      }
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      /* Logo */
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        flex-shrink: 0;
+      }
+      .logo-img {
+        width: 46px;
+        height: 46px;
+        border-radius: 12px;
+        object-fit: cover;
+        border: 2px solid var(--orange);
+      }
+      .logo-name {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.1;
+      }
+      .logo-name .top {
+        font-size: 1rem;
+        font-weight: 800;
+        color: #fff;
+        letter-spacing: 0.5px;
+      }
+      .logo-name .bot {
+        font-size: 0.6rem;
+        font-weight: 600;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        color: var(--orange);
+      }
+
+      /* Nav links */
+      .nav-links {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+      }
+      .nav-links a {
+        font-size: 0.84rem;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.65);
+        letter-spacing: 0.2px;
+        position: relative;
+        transition: color var(--tr);
+      }
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, var(--orange), var(--gold));
+        border-radius: 2px;
+        transition: width var(--tr);
+      }
+      .nav-links a:hover {
+        color: #fff;
+      }
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      /* Nav right */
+      .nav-r {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      /* Hamburger */
+      .ham {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        padding: 6px;
+        z-index: 1001;
+      }
+      .ham span {
+        display: block;
+        width: 24px;
+        height: 2.5px;
+        background: #fff;
+        border-radius: 2px;
+        transition:
+          transform 0.3s,
+          opacity 0.25s,
+          background 0.25s;
+      }
+      .ham.open span:nth-child(1) {
+        transform: translateY(7.5px) rotate(45deg);
+        background: var(--orange);
+      }
+      .ham.open span:nth-child(2) {
+        opacity: 0;
+      }
+      .ham.open span:nth-child(3) {
+        transform: translateY(-7.5px) rotate(-45deg);
+        background: var(--orange);
+      }
+
+      /* Mobile drawer */
+      .mob-drawer {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 998;
+        background: rgba(9, 9, 9, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 28px;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .mob-drawer.open {
+        display: flex;
+        opacity: 1;
+      }
+      .mob-drawer a {
+        font-size: 1.9rem;
+        font-weight: 800;
+        color: rgba(255, 255, 255, 0.7);
+        letter-spacing: 1px;
+        transition: color var(--tr);
+      }
+      .mob-drawer a:hover {
+        color: var(--orange);
+      }
+      .mob-drawer .mob-btn {
+        margin-top: 10px;
+      }
+
+      /* ══════════════════════════════════════════
+     HERO
+  ══════════════════════════════════════════ */
+      #hero {
+        min-height: 100vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        padding-top: 90px;
+      }
+
+      /* animated gradient bg */
+      .hero-bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background: linear-gradient(
+          145deg,
+          #090909 0%,
+          #130600 40%,
+          #0a0a0a 70%,
+          #000d1a 100%
+        );
+      }
+      .hero-bg::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse 70% 80% at 80% 40%,
+          rgba(255, 92, 0, 0.14),
+          transparent 65%
+        );
+      }
+      .hero-bg::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse 50% 60% at 20% 70%,
+          rgba(245, 200, 66, 0.07),
+          transparent 60%
+        );
+      }
+
+      /* Animated glow circles */
+      .glow {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(90px);
+        pointer-events: none;
+        animation: gfloat 9s ease-in-out infinite;
+      }
+      .glow-1 {
+        width: 600px;
+        height: 600px;
+        background: rgba(255, 92, 0, 0.1);
+        top: -100px;
+        right: -80px;
+        animation-delay: 0s;
+      }
+      .glow-2 {
+        width: 400px;
+        height: 400px;
+        background: rgba(245, 200, 66, 0.07);
+        bottom: 60px;
+        left: 5%;
+        animation-delay: 4s;
+      }
+      .glow-3 {
+        width: 280px;
+        height: 280px;
+        background: rgba(255, 92, 0, 0.06);
+        top: 30%;
+        left: 40%;
+        animation-delay: 2s;
+      }
+      @keyframes gfloat {
+        0%,
+        100% {
+          transform: translateY(0) scale(1);
+        }
+        50% {
+          transform: translateY(-30px) scale(1.05);
+        }
+      }
+
+      .hero-grid {
+        position: relative;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+        align-items: center;
+        width: 100%;
+      }
+
+      /* Left */
+      .hero-eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 24px;
+      }
+      .hero-eyebrow .dash {
+        width: 36px;
+        height: 2px;
+        background: linear-gradient(90deg, var(--orange), var(--gold));
+        flex-shrink: 0;
+      }
+      .hero-eyebrow span {
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--orange);
+      }
+      .hero-h1 {
+        font-size: clamp(2.6rem, 5.5vw, 4.6rem);
+        font-weight: 900;
+        line-height: 1.06;
+        margin-bottom: 22px;
+      }
+      .hero-h1 .line-o {
+        display: block;
+        color: var(--orange);
+      }
+      .hero-h1 .line-g {
+        display: block;
+        background: linear-gradient(90deg, var(--gold), var(--gold2));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .hero-desc {
+        font-size: 1rem;
+        color: var(--muted2);
+        max-width: 460px;
+        margin-bottom: 36px;
+        font-weight: 400;
+        line-height: 1.82;
+      }
+      .hero-ctas {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin-bottom: 52px;
+      }
+      .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: var(--radius);
+        overflow: hidden;
+      }
+      .hstat {
+        background: var(--dark2);
+        padding: 18px 16px;
+        text-align: center;
+      }
+      .hstat .n {
+        font-size: 1.7rem;
+        font-weight: 900;
+        background: linear-gradient(135deg, var(--orange), var(--gold));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        line-height: 1;
+      }
+      .hstat .l {
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-top: 4px;
+      }
+
+      /* Right mosaic */
+      .hero-mosaic {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 12px;
+        position: relative;
+      }
+      .hm-img {
+        border-radius: var(--radius);
+        overflow: hidden;
+        position: relative;
+      }
+      .hm-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.6s ease;
+      }
+      .hm-img:hover img {
+        transform: scale(1.07);
+      }
+      .hm-img.span2 {
+        grid-column: span 2;
+        aspect-ratio: 2.2/1;
+      }
+      .hm-img.sq {
+        aspect-ratio: 1;
+      }
+
+      /* Floating label on mosaic */
+      .hero-pill {
+        position: absolute;
+        bottom: -16px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(135deg, var(--orange), #cc3d00);
+        padding: 12px 22px;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        white-space: nowrap;
+        box-shadow: var(--sh-org);
+        z-index: 3;
+      }
+      .hero-pill i {
+        font-size: 1rem;
+      }
+      .hero-pill span {
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+
+      /* ─── TICKER ──────────────────────────────── */
+      .ticker {
+        background: linear-gradient(90deg, var(--orange), #cc3d00);
+        padding: 0;
+        overflow: hidden;
+        position: relative;
+        z-index: 3;
+      }
+      .ticker::before,
+      .ticker::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 80px;
+        z-index: 1;
+        pointer-events: none;
+      }
+      .ticker::before {
+        left: 0;
+        background: linear-gradient(90deg, var(--orange), transparent);
+      }
+      .ticker::after {
+        right: 0;
+        background: linear-gradient(-90deg, #cc3d00, transparent);
+      }
+      .ticker-track {
+        display: flex;
+        width: max-content;
+        animation: tick 30s linear infinite;
+        padding: 13px 0;
+      }
+      .ticker-track:hover {
+        animation-play-state: paused;
+      }
+      .ticker-track .item {
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        color: #fff;
+        padding: 0 30px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        white-space: nowrap;
+      }
+      .ticker-track .item::after {
+        content: "◆";
+        font-size: 0.5rem;
+        opacity: 0.6;
+      }
+      @keyframes tick {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* ══════════════════════════════════════════
+     ABOUT
+  ══════════════════════════════════════════ */
+      #about {
+        padding: 120px 0;
+        background: var(--dark);
+        position: relative;
+        overflow: hidden;
+      }
+      #about::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background: radial-gradient(
+          ellipse 80% 60% at 100% 50%,
+          rgba(255, 92, 0, 0.05),
+          transparent
+        );
+      }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
+      }
+
+      /* Image collage */
+      .about-collage {
+        position: relative;
+        padding-bottom: 32px;
+        padding-right: 32px;
+      }
+      .ac-main {
+        border-radius: 20px;
+        overflow: hidden;
+        aspect-ratio: 0.88;
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+      }
+      .ac-main img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .ac-float {
+        position: absolute;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 4px solid var(--dark);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        z-index: 2;
+      }
+      .ac-float img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .ac-br {
+        width: 55%;
+        bottom: 0;
+        right: 0;
+        aspect-ratio: 1.25;
+      }
+      .ac-tl {
+        width: 44%;
+        top: -20px;
+        left: -20px;
+        aspect-ratio: 1.3;
+        display: none;
+      }
+
+      /* Orange corner accent */
+      .ac-accent {
+        position: absolute;
+        bottom: -12px;
+        right: -12px;
+        width: 120px;
+        height: 120px;
+        border-radius: 0 0 20px 0;
+        background: linear-gradient(135deg, var(--orange), var(--gold));
+        opacity: 0.15;
+        z-index: 0;
+      }
+
+      /* Experience badge */
+      .exp-box {
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+        background: linear-gradient(135deg, var(--orange), #cc3d00);
+        padding: 18px 26px;
+        border-radius: 14px;
+        margin-top: 28px;
+        box-shadow: var(--sh-org);
+      }
+      .exp-box .big {
+        font-size: 2.6rem;
+        font-weight: 900;
+        line-height: 1;
+      }
+      .exp-box .txt {
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        max-width: 90px;
+        line-height: 1.3;
+      }
+
+      /* Pills grid */
+      .about-pills {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-top: 32px;
+      }
+      .pill {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: var(--dark2);
+        border: 1px solid var(--glassb);
+        border-radius: 10px;
+        padding: 13px 16px;
+        font-size: 0.83rem;
+        font-weight: 600;
+        transition:
+          border-color var(--tr),
+          background var(--tr),
+          transform var(--tr);
+      }
+      .pill:hover {
+        border-color: var(--orange);
+        background: var(--orange3);
+        transform: translateY(-2px);
+      }
+      .pill i {
+        color: var(--orange);
+        font-size: 0.95rem;
+        width: 18px;
+        flex-shrink: 0;
+      }
+
+      /* ══════════════════════════════════════════
+     SERVICES
+  ══════════════════════════════════════════ */
+      #services {
+        padding: 120px 0;
+        background: var(--black);
+        position: relative;
+        overflow: hidden;
+      }
+      #services::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse 50% 50% at 50% 0%,
+          rgba(245, 200, 66, 0.04),
+          transparent 60%
+        );
+      }
+
+      .services-head {
+        text-align: center;
+        margin-bottom: 64px;
+      }
+      .services-head .sec-p {
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .srv-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+      }
+      .srv {
+        background: var(--dark2);
+        border: 1px solid var(--glassb);
+        border-radius: var(--radius);
+        overflow: hidden;
+        transition:
+          transform var(--tr),
+          border-color var(--tr),
+          box-shadow var(--tr);
+        position: relative;
+        group: true;
+      }
+      .srv:hover {
+        transform: translateY(-10px);
+        border-color: var(--orange);
+        box-shadow: 0 24px 60px rgba(255, 92, 0, 0.15);
+      }
+      .srv-img-wrap {
+        aspect-ratio: 16/9;
+        overflow: hidden;
+        position: relative;
+      }
+      .srv-img-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.55s ease;
+      }
+      .srv:hover .srv-img-wrap img {
+        transform: scale(1.08);
+      }
+      .srv-img-wrap::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(24, 24, 24, 0.9) 0%,
+          transparent 60%
+        );
+      }
+      .srv-num-badge {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--orange), var(--gold));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.72rem;
+        font-weight: 800;
+        z-index: 2;
+        box-shadow: var(--sh-org);
+      }
+      .srv-body {
+        padding: 22px 24px;
+      }
+      .srv-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, var(--orange), #cc3d00);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.15rem;
+        margin-bottom: 16px;
+        box-shadow: 0 6px 20px rgba(255, 92, 0, 0.3);
+        margin-top: -34px;
+        position: relative;
+        z-index: 1;
+        border: 3px solid var(--dark2);
+      }
+      .srv h3 {
+        font-size: 1.05rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .srv p {
+        color: var(--muted);
+        font-size: 0.85rem;
+        line-height: 1.75;
+      }
+      .srv-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: var(--orange);
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        margin-top: 14px;
+        transition: gap var(--tr);
+      }
+      .srv:hover .srv-link {
+        gap: 10px;
+      }
+
+      /* ══════════════════════════════════════════
+     GALLERY
+  ══════════════════════════════════════════ */
+      #gallery {
+        padding: 120px 0;
+        background: var(--dark);
+      }
+
+      .gal-head {
+        margin-bottom: 52px;
+      }
+      .gal-filters {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 28px;
+      }
+      .f-btn {
+        font-family: "Poppins", sans-serif;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        padding: 9px 22px;
+        border-radius: 50px;
+        border: 1.5px solid rgba(255, 255, 255, 0.15);
+        background: transparent;
+        color: var(--muted);
+        cursor: pointer;
+        transition: all var(--tr);
+      }
+      .f-btn:hover,
+      .f-btn.act {
+        border-color: var(--orange);
+        color: var(--orange);
+        background: var(--orange3);
+      }
+
+      .gal-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 220px;
+        gap: 12px;
+      }
+      .gi {
+        border-radius: 14px;
+        overflow: hidden;
+        position: relative;
+        cursor: zoom-in;
+        border: 1px solid var(--glassb);
+      }
+      .gi img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition:
+          transform 0.55s ease,
+          filter 0.55s ease;
+        filter: brightness(0.88);
+      }
+      .gi:hover img {
+        transform: scale(1.1);
+        filter: brightness(1);
+      }
+      .gi:hover {
+        box-shadow: 0 0 0 2px var(--orange);
+      }
+      .gi.t2 {
+        grid-row: span 2;
+      }
+      .gi.c2 {
+        grid-column: span 2;
+      }
+      .gi-ov {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(9, 9, 9, 0.92) 0%,
+          transparent 50%
+        );
+        opacity: 0;
+        display: flex;
+        align-items: flex-end;
+        padding: 18px;
+        transition: opacity var(--tr);
+      }
+      .gi:hover .gi-ov {
+        opacity: 1;
+      }
+      .gi-ov h4 {
+        font-size: 0.9rem;
+        font-weight: 700;
+        margin-bottom: 3px;
+      }
+      .gi-ov span {
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--orange);
+      }
+
+      /* Lightbox */
+      .lb {
+        position: fixed;
+        inset: 0;
+        z-index: 9000;
+        background: rgba(0, 0, 0, 0.95);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+      .lb.show {
+        display: flex;
+      }
+      .lb img {
+        max-width: 90vw;
+        max-height: 88vh;
+        border-radius: 12px;
+        object-fit: contain;
+        box-shadow: 0 0 80px rgba(255, 92, 0, 0.2);
+      }
+      .lb-x {
+        position: absolute;
+        top: 18px;
+        right: 22px;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.08);
+        border: none;
+        color: #fff;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background var(--tr);
+      }
+      .lb-x:hover {
+        background: var(--orange);
+      }
+
+      /* ══════════════════════════════════════════
+     LED BOARDS
+  ══════════════════════════════════════════ */
+      #led {
+        padding: 120px 0;
+        background: var(--black);
+        position: relative;
+        overflow: hidden;
+      }
+      #led::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse 60% 70% at 60% 50%,
+          rgba(255, 92, 0, 0.06),
+          transparent 65%
+        );
+      }
+
+      .led-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 80px;
+        align-items: center;
+      }
+      .led-imgs-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      .li-img {
+        border-radius: var(--radius);
+        overflow: hidden;
+      }
+      .li-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.55s ease;
+        display: block;
+      }
+      .li-img:hover img {
+        transform: scale(1.06);
+      }
+      .li-img.span2 {
+        grid-column: span 2;
+        aspect-ratio: 2.4/1;
+      }
+      .li-img.sq {
+        aspect-ratio: 1;
+      }
+
+      .led-features {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        margin-top: 28px;
+      }
+      .lf {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        background: var(--dark2);
+        border: 1px solid var(--glassb);
+        border-radius: var(--radius-sm);
+        padding: 16px 18px;
+        transition:
+          border-color var(--tr),
+          transform var(--tr);
+      }
+      .lf:hover {
+        border-color: var(--orange);
+        transform: translateX(6px);
+      }
+      .lf-icon {
+        width: 42px;
+        height: 42px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: linear-gradient(135deg, var(--orange), #cc3d00);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.95rem;
+        box-shadow: 0 4px 16px rgba(255, 92, 0, 0.28);
+      }
+      .lf h4 {
+        font-size: 0.9rem;
+        font-weight: 700;
+        margin-bottom: 4px;
+      }
+      .lf p {
+        font-size: 0.82rem;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      /* ══════════════════════════════════════════
+     CNC WORK
+  ══════════════════════════════════════════ */
+      #cnc {
+        padding: 120px 0;
+        background: var(--dark);
+        position: relative;
+        overflow: hidden;
+      }
+      #cnc::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--orange),
+          transparent
+        );
+      }
+
+      .cnc-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.1fr;
+        gap: 80px;
+        align-items: center;
+      }
+
+      .cnc-imgs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      .ci {
+        border-radius: var(--radius);
+        overflow: hidden;
+      }
+      .ci img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+        display: block;
+      }
+      .ci:hover img {
+        transform: scale(1.07);
+      }
+      .ci.tall {
+        grid-row: span 2;
+      }
+      .ci.tall img {
+        aspect-ratio: unset;
+        height: 100%;
+      }
+      .ci.wide {
+        grid-column: span 2;
+        aspect-ratio: 2.4/1;
+      }
+      .ci:not(.tall):not(.wide) {
+        aspect-ratio: 1.1;
+      }
+
+      .cnc-feat-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        margin-top: 32px;
+      }
+      .cf {
+        background: var(--dark2);
+        border: 1px solid var(--glassb);
+        border-radius: var(--radius-sm);
+        padding: 20px 18px;
+        transition: all var(--tr);
+      }
+      .cf:hover {
+        border-color: var(--gold);
+        transform: translateY(-4px);
+        background: rgba(245, 200, 66, 0.04);
+      }
+      .cf-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        background: rgba(245, 200, 66, 0.1);
+        border: 1px solid rgba(245, 200, 66, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--gold);
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+      }
+      .cf h4 {
+        font-size: 0.88rem;
+        font-weight: 700;
+        margin-bottom: 6px;
+      }
+      .cf p {
+        font-size: 0.8rem;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      /* ══════════════════════════════════════════
+     PROCESS
+  ══════════════════════════════════════════ */
+      #process {
+        padding: 120px 0;
+        background: var(--black);
+      }
+      .proc-head {
+        text-align: center;
+        margin-bottom: 72px;
+      }
+      .proc-head .sec-p {
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .proc-steps {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        position: relative;
+        gap: 20px;
+      }
+      .proc-steps::before {
+        content: "";
+        position: absolute;
+        top: 35px;
+        left: 12%;
+        right: 12%;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          var(--orange),
+          var(--gold),
+          transparent
+        );
+        z-index: 0;
+      }
+
+      .ps {
+        text-align: center;
+        padding: 0 14px;
+        position: relative;
+        z-index: 1;
+      }
+      .ps-num {
+        position: absolute;
+        top: -4px;
+        right: calc(50% - 28px);
+        font-size: 0.65rem;
+        font-weight: 800;
+        letter-spacing: 1px;
+        background: linear-gradient(135deg, var(--orange), var(--gold));
+        color: #111;
+        padding: 2px 9px;
+        border-radius: 50px;
+      }
+      .ps-circle {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background: var(--dark2);
+        border: 2px solid var(--glassb);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 22px;
+        font-size: 1.3rem;
+        color: var(--orange);
+        transition: all var(--tr);
+      }
+      .ps:hover .ps-circle {
+        background: linear-gradient(135deg, var(--orange), #cc3d00);
+        color: #fff;
+        border-color: transparent;
+        box-shadow: var(--sh-org);
+      }
+      .ps h3 {
+        font-size: 0.95rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .ps p {
+        color: var(--muted);
+        font-size: 0.82rem;
+        line-height: 1.72;
+      }
+
+      /* ══════════════════════════════════════════
+     TESTIMONIALS
+  ══════════════════════════════════════════ */
+      #testimonials {
+        padding: 120px 0;
+        background: var(--dark);
+      }
+
+      .testi-head {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+      .testi-head .sec-p {
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .testi-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+      }
+      .tc {
+        background: var(--dark2);
+        border: 1px solid var(--glassb);
+        border-radius: var(--radius);
+        padding: 30px 26px;
+        position: relative;
+        overflow: hidden;
+        transition:
+          transform var(--tr),
+          border-color var(--tr),
+          box-shadow var(--tr);
+      }
+      .tc:hover {
+        transform: translateY(-7px);
+        border-color: rgba(255, 92, 0, 0.4);
+        box-shadow: 0 20px 56px rgba(255, 92, 0, 0.1);
+      }
+      .tc::before {
+        content: '"';
+        position: absolute;
+        top: 6px;
+        right: 16px;
+        font-size: 6rem;
+        font-weight: 900;
+        color: rgba(255, 92, 0, 0.07);
+        line-height: 1;
+        font-family: "Poppins", sans-serif;
+      }
+      .tc-stars {
+        margin-bottom: 14px;
+      }
+      .tc-stars i {
+        color: var(--gold);
+        font-size: 0.85rem;
+      }
+      .tc-text {
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 0.88rem;
+        line-height: 1.82;
+        margin-bottom: 22px;
+      }
+      .tc-author {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .tc-av {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--orange), var(--gold));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-size: 1rem;
+        color: #111;
+        flex-shrink: 0;
+      }
+      .tc-name {
+        font-weight: 700;
+        font-size: 0.88rem;
+      }
+      .tc-loc {
+        font-size: 0.75rem;
+        color: var(--muted);
+      }
+
+      /* ══════════════════════════════════════════
+     CONTACT
+  ══════════════════════════════════════════ */
+      #contact {
+        padding: 120px 0;
+        background: var(--black);
+        position: relative;
+        overflow: hidden;
+      }
+      #contact::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse 60% 60% at 50% 0%,
+          rgba(255, 92, 0, 0.06),
+          transparent 55%
+        );
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: start;
+      }
+
+      .ci-info .sec-p {
+        margin-bottom: 36px;
+      }
+      .c-img {
+        border-radius: var(--radius);
+        overflow: hidden;
+        aspect-ratio: 16/7;
+        margin-bottom: 30px;
+      }
+      .c-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .c-links {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .cl {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        background: var(--dark2);
+        border: 1px solid var(--glassb);
+        border-radius: var(--radius-sm);
+        padding: 15px 18px;
+        font-size: 0.88rem;
+        font-weight: 600;
+        transition: all var(--tr);
+      }
+      .cl:hover {
+        border-color: var(--orange);
+        background: var(--orange3);
+        transform: translateX(6px);
+      }
+      .cl i {
+        width: 18px;
+        color: var(--orange);
+        font-size: 0.95rem;
+      }
+      .cl.wa-link i {
+        color: #25d366;
+      }
+      .cl.wa-link:hover {
+        border-color: #25d366;
+        background: rgba(37, 211, 102, 0.08);
+      }
+
+      /* Form */
+      .c-form {
+        background: var(--dark2);
+        border: 1px solid var(--glassb);
+        border-radius: var(--radius);
+        padding: 38px 34px;
+      }
+      .c-form-title {
+        font-size: 1.4rem;
+        font-weight: 800;
+        margin-bottom: 8px;
+      }
+      .c-form-sub {
+        color: var(--muted);
+        font-size: 0.86rem;
+        margin-bottom: 28px;
+      }
+      .fg {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        margin-bottom: 16px;
+      }
+      .fg label {
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.5);
+      }
+      .fg input,
+      .fg select,
+      .fg textarea {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1.5px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        padding: 13px 15px;
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        font-size: 0.88rem;
+        outline: none;
+        resize: vertical;
+        transition:
+          border-color var(--tr),
+          background var(--tr);
+      }
+      .fg input:focus,
+      .fg select:focus,
+      .fg textarea:focus {
+        border-color: var(--orange);
+        background: rgba(255, 92, 0, 0.05);
+      }
+      .fg input::placeholder,
+      .fg textarea::placeholder {
+        color: rgba(255, 255, 255, 0.25);
+      }
+      .fg select option {
+        background: var(--dark2);
+      }
+      .fg textarea {
+        min-height: 110px;
+      }
+      .fg-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+      .sbtn {
+        width: 100%;
+        padding: 15px;
+        border: none;
+        background: linear-gradient(135deg, var(--orange), #cc3d00);
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-size: 0.9rem;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+        box-shadow: var(--sh-org);
+        cursor: pointer;
+        transition:
+          transform var(--tr),
+          box-shadow var(--tr);
+      }
+      .sbtn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 18px 48px rgba(255, 92, 0, 0.52);
+      }
+
+      /* ══════════════════════════════════════════
+     FOOTER
+  ══════════════════════════════════════════ */
+      footer {
+        background: #050505;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        padding: 70px 0 24px;
+      }
+      .foot-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 56px;
+        margin-bottom: 50px;
+      }
+      .foot-brand p {
+        color: var(--muted);
+        font-size: 0.85rem;
+        line-height: 1.8;
+        margin: 16px 0 24px;
+        max-width: 290px;
+      }
+      .foot-socials {
+        display: flex;
+        gap: 10px;
+      }
+      .fsoc {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        background: var(--dark2);
+        border: 1px solid var(--glassb);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.85rem;
+        transition: all var(--tr);
+      }
+      .fsoc:hover {
+        background: var(--orange);
+        border-color: var(--orange);
+        transform: translateY(-3px);
+      }
+      .foot-col h4 {
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.4);
+        margin-bottom: 18px;
+      }
+      .foot-col ul {
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+      }
+      .foot-col a {
+        font-size: 0.85rem;
+        color: var(--muted);
+        transition:
+          color var(--tr),
+          padding-left var(--tr);
+      }
+      .foot-col a:hover {
+        color: var(--orange);
+        padding-left: 6px;
+      }
+      .foot-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        padding-top: 22px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        font-size: 0.78rem;
+        color: var(--muted);
+      }
+      .foot-bottom .heart {
+        color: var(--orange);
+      }
+
+      /* WhatsApp float */
+      .wa-float {
+        position: fixed;
+        bottom: 28px;
+        right: 28px;
+        z-index: 800;
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        background: #25d366;
+        color: #fff;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 8px 30px rgba(37, 211, 102, 0.45);
+        transition: transform var(--tr);
+        animation: wap 2.8s infinite;
+      }
+      .wa-float:hover {
+        transform: scale(1.14);
+        animation: none;
+        box-shadow: 0 14px 44px rgba(37, 211, 102, 0.65);
+      }
+      @keyframes wap {
+        0%,
+        100% {
+          box-shadow:
+            0 8px 30px rgba(37, 211, 102, 0.45),
+            0 0 0 0 rgba(37, 211, 102, 0.35);
+        }
+        60% {
+          box-shadow:
+            0 8px 30px rgba(37, 211, 102, 0.45),
+            0 0 0 14px rgba(37, 211, 102, 0);
+        }
+      }
+      .wa-tip {
+        position: absolute;
+        right: 66px;
+        background: var(--dark2);
+        border: 1px solid var(--glassb);
+        padding: 8px 14px;
+        border-radius: 8px;
+        font-size: 0.78rem;
+        font-weight: 600;
+        white-space: nowrap;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity var(--tr);
+      }
+      .wa-float:hover .wa-tip {
+        opacity: 1;
+      }
+      .wa-tip::after {
+        content: "";
+        position: absolute;
+        right: -7px;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 7px solid transparent;
+        border-left-color: var(--dark2);
+        border-right: none;
+      }
+
+      /* ══════════════════════════════════════════
+     RESPONSIVE
+  ══════════════════════════════════════════ */
+      @media (max-width: 1100px) {
+        .srv-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .gal-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @media (max-width: 900px) {
+        .nav-links,
+        .nav-r .nav-phone,
+        .nav-r .btn {
+          display: none;
+        }
+        .ham {
+          display: flex;
+        }
+
+        .hero-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero-mosaic {
+          display: none;
+        }
+        .hero-h1 {
+          font-size: clamp(2.2rem, 8vw, 3.2rem);
+        }
+        .hero-stats {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .about-grid {
+          grid-template-columns: 1fr;
+        }
+        .ac-tl {
+          display: none;
+        }
+        /* Reset collage so floating image doesn't overflow on mobile */
+        .about-collage {
+          padding-bottom: 0;
+          padding-right: 0;
+        }
+        .ac-float.ac-br {
+          position: relative;
+          bottom: auto;
+          right: auto;
+          width: 100%;
+          aspect-ratio: 16/7;
+          border-radius: var(--radius);
+          border: none;
+          margin-top: 12px;
+          box-shadow: none;
+        }
+        .ac-main {
+          aspect-ratio: 16/9;
+        }
+        .ac-accent {
+          display: none;
+        }
+
+        .led-grid {
+          grid-template-columns: 1fr;
+        }
+        .led-imgs-wrap {
+          order: -1;
+        }
+
+        .cnc-grid {
+          grid-template-columns: 1fr;
+        }
+        .cnc-imgs {
+          order: -1;
+        }
+
+        .proc-steps {
+          grid-template-columns: 1fr 1fr;
+          gap: 28px;
+        }
+        .proc-steps::before {
+          display: none;
+        }
+
+        .testi-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .testi-grid .tc:last-child {
+          display: none;
+        }
+
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+        .c-form {
+          padding: 26px 20px;
+        }
+
+        .foot-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 40px;
+        }
+        .foot-brand {
+          grid-column: span 2;
+        }
+      }
+      @media (max-width: 640px) {
+        .wrap {
+          width: 94%;
+        }
+        #hero {
+          padding-top: 78px;
+        }
+        .hero-h1 {
+          font-size: clamp(1.9rem, 8.5vw, 2.8rem);
+        }
+        .hero-ctas {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .hero-ctas .btn {
+          justify-content: center;
+          width: 100%;
+        }
+        .hero-stats {
+          grid-template-columns: 1fr 1fr;
+        }
+        .hstat:last-child {
+          grid-column: span 2;
+        }
+
+        .about-pills {
+          grid-template-columns: 1fr;
+        }
+        .exp-box {
+          width: 100%;
+          justify-content: center;
+        }
+        .cnc-feat-grid {
+          grid-template-columns: 1fr;
+        }
+        .fg-row {
+          grid-template-columns: 1fr;
+        }
+
+        .srv-grid {
+          grid-template-columns: 1fr;
+        }
+        .gal-grid {
+          grid-template-columns: 1fr 1fr;
+          grid-auto-rows: 160px;
+        }
+        .gi.t2 {
+          grid-row: span 1;
+        }
+        .gi.c2 {
+          grid-column: span 2;
+        }
+
+        .proc-steps {
+          grid-template-columns: 1fr;
+        }
+        .proc-steps::before {
+          display: none;
+        }
+
+        .testi-grid {
+          grid-template-columns: 1fr;
+        }
+        .testi-grid .tc:last-child {
+          display: block;
+        }
+        .testi-grid .tc:nth-child(n + 4) {
+          display: none;
+        }
+
+        .c-form {
+          padding: 20px 16px;
+        }
+        .c-form-title {
+          font-size: 1.15rem;
+        }
+
+        .foot-grid {
+          grid-template-columns: 1fr;
+        }
+        .foot-brand {
+          grid-column: 1;
+        }
+        .foot-bottom {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .wa-float {
+          width: 52px;
+          height: 52px;
+          font-size: 1.3rem;
+          bottom: 20px;
+          right: 20px;
+        }
+        .ticker {
+          display: none;
+        }
+
+        /* Ensure no horizontal overflow */
+        section,
+        footer {
+          overflow-x: hidden;
+        }
+        .led-imgs-wrap,
+        .cnc-imgs,
+        .about-collage {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ════════════ NAVBAR ════════════ -->
+    <nav id="nav">
+      <div class="wrap nav-inner">
+        <a href="#hero" class="logo">
+          <img src="logo.png" alt="LSB Logo" class="logo-img" />
+          <div class="logo-name">
+            <span class="top">Furniture House</span>
+            <span class="bot">& LED Sign Board</span>
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#led">LED Boards</a></li>
+          <li><a href="#cnc">CNC Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-r">
+          <a
+            href="tel:+917643090002"
+            class="btn btn-outline nav-phone"
+            style="padding: 10px 20px; border-radius: 50px; font-size: 0.82rem"
+          >
+            <i class="fas fa-phone-alt"></i> +91 76430 90002
+          </a>
+          <a href="#contact" class="btn btn-orange" style="padding: 11px 24px"
+            >Get Quote <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+        <button class="ham" id="ham" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div class="mob-drawer" id="mobDrawer">
+      <a href="#about" class="mob-link">About</a>
+      <a href="#services" class="mob-link">Services</a>
+      <a href="#gallery" class="mob-link">Gallery</a>
+      <a href="#led" class="mob-link">LED Boards</a>
+      <a href="#cnc" class="mob-link">CNC Work</a>
+      <a href="#contact" class="mob-link">Contact</a>
+      <a href="tel:+917643090002" class="btn btn-orange mob-btn mob-link">
+        <i class="fas fa-phone-alt"></i> Call Now
+      </a>
+    </div>
+
+    <!-- ════════════ HERO ════════════ -->
+    <section id="hero">
+      <div class="hero-bg"></div>
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+      <div class="glow glow-3"></div>
+
+      <div class="wrap">
+        <div class="hero-grid">
+          <!-- Left -->
+          <div class="hero-left">
+            <div class="hero-eyebrow" data-r data-d="1">
+              <div class="dash"></div>
+              <span>Jamui, Bihar's #1 Workshop</span>
+            </div>
+            <h1 class="hero-h1" data-r data-d="2">
+              Premium
+              <span class="line-o">LED Signs</span>
+              <span class="line-g">& Furniture</span>
+            </h1>
+            <p class="hero-desc" data-r data-d="3">
+              Precision laser cutting, bold LED sign boards, and exquisite
+              CNC-carved furniture — all crafted under one roof in Jamui.
+              Quality that speaks for itself.
+            </p>
+            <div class="hero-ctas" data-r data-d="4">
+              <a href="#contact" class="btn btn-orange"
+                ><i class="fas fa-paper-plane"></i> Get Free Quote</a
+              >
+              <a
+                href="https://wa.me/917643090002?text=Namaste%20%F0%9F%99%8F%20I%20visited%20your%20website%20and%20I%27m%20interested%20in%20your%20services.%20Please%20help%20me%20with%20more%20details."
+                target="_blank"
+                class="btn btn-outline"
+                style="color: #25d366; border-color: #25d366"
+                ><i class="fab fa-whatsapp"></i> WhatsApp Us</a
+              >
+              <a href="#gallery" class="btn btn-outline"
+                ><i class="fas fa-images"></i> View Work</a
+              >
+            </div>
+            <div class="hero-stats" data-r data-d="5">
+              <div class="hstat">
+                <div class="n">10+</div>
+                <div class="l">Years Experience</div>
+              </div>
+              <div class="hstat">
+                <div class="n">500+</div>
+                <div class="l">Happy Clients</div>
+              </div>
+              <div class="hstat">
+                <div class="n">100%</div>
+                <div class="l">Custom Work</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right mosaic -->
+          <div class="hero-mosaic" data-r="r" data-d="3">
+            <div class="hm-img span2">
+              <img
+                src="signboard3.jpg"
+                alt="LED sign board wall"
+                loading="eager"
+              />
+            </div>
+            <div class="hm-img sq">
+              <img src="5.webp" alt="DJ Jaghori LED board" loading="eager" />
+            </div>
+            <div class="hm-img sq">
+              <img src="7.webp" alt="CNC carving" loading="eager" />
+            </div>
+            <div class="hero-pill">
+              <i class="fas fa-star"></i>
+              <span>Jamui's Most Trusted Studio</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════ TICKER ════════════ -->
+    <div class="ticker">
+      <div class="ticker-track">
+        <div class="item">LED Sign Boards</div>
+        <div class="item">CNC Furniture Carving</div>
+        <div class="item">Laser Cutting</div>
+        <div class="item">Acrylic 3D Letters</div>
+        <div class="item">Neon Effect Boards</div>
+        <div class="item">Door Panel Carving</div>
+        <div class="item">Custom Signage</div>
+        <div class="item">Wood Engraving</div>
+        <div class="item">LED Sign Boards</div>
+        <div class="item">CNC Furniture Carving</div>
+        <div class="item">Laser Cutting</div>
+        <div class="item">Acrylic 3D Letters</div>
+        <div class="item">Neon Effect Boards</div>
+        <div class="item">Door Panel Carving</div>
+        <div class="item">Custom Signage</div>
+        <div class="item">Wood Engraving</div>
+      </div>
+    </div>
+
+    <!-- ════════════ ABOUT ════════════ -->
+    <section id="about">
+      <div class="wrap">
+        <div class="about-grid">
+          <!-- Images -->
+          <div class="about-collage" data-r="l">
+            <div class="ac-main">
+              <img src="2.webp" alt="Our CNC workshop" loading="lazy" />
+            </div>
+            <div class="ac-float ac-br">
+              <img src="8.webp" alt="Workshop office" loading="lazy" />
+            </div>
+            <div class="ac-accent"></div>
+          </div>
+
+          <!-- Text -->
+          <div data-r="r">
+            <div class="hline">
+              <div class="bar"></div>
+              <span>About Us</span>
+            </div>
+            <h2 class="sec-h">
+              Jamui's Most <span class="o">Trusted</span> Craft Studio
+            </h2>
+            <p class="sec-p" style="margin-bottom: 0">
+              For over a decade, we've been transforming raw materials into
+              stunning LED sign boards and exquisite furniture from our workshop
+              on Station Road, Jamui. State-of-the-art CNC and laser machines
+              combined with skilled artisans deliver big-city quality at honest
+              prices.
+            </p>
+
+            <div class="about-pills">
+              <div class="pill" data-r data-d="1">
+                <i class="fas fa-microchip"></i> CNC & Laser Tech
+              </div>
+              <div class="pill" data-r data-d="2">
+                <i class="fas fa-lightbulb"></i> LED Illumination
+              </div>
+              <div class="pill" data-r data-d="3">
+                <i class="fas fa-pencil-ruler"></i> 100% Custom Design
+              </div>
+              <div class="pill" data-r data-d="4">
+                <i class="fas fa-truck"></i> Fast Local Delivery
+              </div>
+              <div class="pill" data-r data-d="2">
+                <i class="fas fa-rupee-sign"></i> Best Price Guarantee
+              </div>
+              <div class="pill" data-r data-d="3">
+                <i class="fas fa-award"></i> Premium Materials
+              </div>
+            </div>
+
+            <div class="exp-box">
+              <div class="big">10+</div>
+              <div class="txt">Years of Excellence in Jamui</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════ SERVICES ════════════ -->
+    <section id="services">
+      <div class="wrap">
+        <div class="services-head" data-r>
+          <div class="hline" style="justify-content: center">
+            <div class="bar"></div>
+            <span>What We Do</span>
+          </div>
+          <h2 class="sec-h">Our <span class="o">Premium</span> Services</h2>
+          <p class="sec-p">
+            Every service is delivered with precision machinery, skilled
+            craftsmanship, and premium materials — guaranteed.
+          </p>
+        </div>
+        <div class="srv-grid">
+          <div class="srv" data-r data-d="1">
+            <div class="srv-img-wrap">
+              <img src="9.webp" alt="LED Sign Boards" loading="lazy" />
+              <div class="srv-num-badge">01</div>
+            </div>
+            <div class="srv-body">
+              <div class="srv-icon"><i class="fas fa-sign"></i></div>
+              <h3>LED Sign Boards</h3>
+              <p>
+                Backlit acrylic letters, neon-effect panels, and full custom
+                illuminated sign boards for shops and offices.
+              </p>
+              <div class="srv-link">
+                Explore <i class="fas fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="srv" data-r data-d="2">
+            <div class="srv-img-wrap">
+              <img src="laser.webp" alt="Laser Cutting" loading="lazy" />
+              <div class="srv-num-badge">02</div>
+            </div>
+            <div class="srv-body">
+              <div class="srv-icon"><i class="fas fa-vector-square"></i></div>
+              <h3>Laser Cutting & Engraving</h3>
+              <p>
+                Ultra-precise laser cutting on acrylic, wood, metal, and fabric
+                with intricate detail and zero waste.
+              </p>
+              <div class="srv-link">
+                Explore <i class="fas fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="srv" data-r data-d="3">
+            <div class="srv-img-wrap">
+              <img src="7.webp" alt="CNC Furniture" loading="lazy" />
+              <div class="srv-num-badge">03</div>
+            </div>
+            <div class="srv-body">
+              <div class="srv-icon"><i class="fas fa-couch"></i></div>
+              <h3>CNC Furniture Carving</h3>
+              <p>
+                Breathtaking CNC-carved beds, panels, and decorative furniture
+                with royal traditional and modern designs.
+              </p>
+              <div class="srv-link">
+                Explore <i class="fas fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="srv" data-r data-d="1">
+            <div class="srv-img-wrap">
+              <img src="10.webp" alt="Acrylic Branding" loading="lazy" />
+              <div class="srv-num-badge">04</div>
+            </div>
+            <div class="srv-body">
+              <div class="srv-icon"><i class="fas fa-cube"></i></div>
+              <h3>Acrylic Branding</h3>
+              <p>
+                3D acrylic letters, logo cutouts, and brand identity boards in
+                any color or finish for premium presence.
+              </p>
+              <div class="srv-link">
+                Explore <i class="fas fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="srv" data-r data-d="2">
+            <div class="srv-img-wrap">
+              <img src="carbing.jpg" alt="Door Panels" loading="lazy" />
+              <div class="srv-num-badge">05</div>
+            </div>
+            <div class="srv-body">
+              <div class="srv-icon"><i class="fas fa-door-open"></i></div>
+              <h3>3D Door Panels</h3>
+              <p>
+                Decorative door panels with intricate CNC carvings — floral,
+                religious, and custom motifs that transform entrances.
+              </p>
+              <div class="srv-link">
+                Explore <i class="fas fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="srv" data-r data-d="3">
+            <div class="srv-img-wrap">
+              <img src="finishing.webp" alt="Finishing" loading="lazy" />
+              <div class="srv-num-badge">06</div>
+            </div>
+            <div class="srv-body">
+              <div class="srv-icon"><i class="fas fa-paint-brush"></i></div>
+              <h3>Premium Finishing</h3>
+              <p>
+                Professional painting, polishing, and surface finishing that
+                protects your work and adds a luxury look and feel.
+              </p>
+              <div class="srv-link">
+                Explore <i class="fas fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════ GALLERY ════════════ -->
+    <section id="gallery">
+      <div class="wrap">
+        <div class="gal-head" data-r>
+          <div class="hline">
+            <div class="bar"></div>
+            <span>Our Work</span>
+          </div>
+          <h2 class="sec-h">Project <span class="g">Gallery</span></h2>
+          <p class="sec-p">
+            Real projects. Real craftsmanship. Every piece made with pride in
+            Jamui.
+          </p>
+          <div class="gal-filters">
+            <button class="f-btn act" data-f="all">All Work</button>
+            <button class="f-btn" data-f="led">LED Signs</button>
+            <button class="f-btn" data-f="cnc">CNC & Laser</button>
+            <button class="f-btn" data-f="furn">Furniture</button>
+          </div>
+        </div>
+
+        <div class="gal-grid" id="galGrid">
+          <div class="gi t2" data-cat="led" data-r data-d="1">
+            <img
+              src="9.webp"
+              alt="LED sign board display wall"
+              loading="lazy"
+            />
+            <div class="gi-ov">
+              <div>
+                <h4>LED Display Wall</h4>
+                <span>LED Signs</span>
+              </div>
+            </div>
+          </div>
+          <div class="gi" data-cat="led" data-r data-d="2">
+            <img src="5.webp" alt="DJ Jaghori LED board" loading="lazy" />
+            <div class="gi-ov">
+              <div>
+                <h4>DJ Jaghori Board</h4>
+                <span>Custom LED</span>
+              </div>
+            </div>
+          </div>
+          <div class="gi" data-cat="led" data-r data-d="3">
+            <img src="4.webp" alt="iPhone acrylic oval sign" loading="lazy" />
+            <div class="gi-ov">
+              <div>
+                <h4>iPhone Oval Sign</h4>
+                <span>Acrylic Branding</span>
+              </div>
+            </div>
+          </div>
+          <div class="gi" data-cat="led" data-r data-d="2">
+            <img
+              src="10.webp"
+              alt="Samsung Oppo Vivo oval signs"
+              loading="lazy"
+            />
+            <div class="gi-ov">
+              <div>
+                <h4>Brand Oval Signs</h4>
+                <span>Acrylic Letters</span>
+              </div>
+            </div>
+          </div>
+          <div class="gi" data-cat="led" data-r data-d="3">
+            <img src="3.webp" alt="LED sign board display" loading="lazy" />
+            <div class="gi-ov">
+              <div>
+                <h4>Shop Display Board</h4>
+                <span>LED Sign</span>
+              </div>
+            </div>
+          </div>
+          <div class="gi c2" data-cat="cnc" data-r data-d="1">
+            <img src="7.webp" alt="CNC router carving wood" loading="lazy" />
+            <div class="gi-ov">
+              <div>
+                <h4>CNC Carving in Action</h4>
+                <span>CNC Routing</span>
+              </div>
+            </div>
+          </div>
+          <div class="gi" data-cat="cnc" data-r data-d="2">
+            <img
+              src="laserrrrrrrrr.jpeg"
+              alt="Laser engraving on brass"
+              loading="lazy"
+            />
+            <div class="gi-ov">
+              <div>
+                <h4>Brass Laser Engraving</h4>
+                <span>Laser Work</span>
+              </div>
+            </div>
+          </div>
+          <div class="gi" data-cat="cnc" data-r data-d="3">
+            <img src="1.webp" alt="Laser cutting machine" loading="lazy" />
+            <div class="gi-ov">
+              <div>
+                <h4>EVA-II Laser Cutter</h4>
+                <span>Machinery</span>
+              </div>
+            </div>
+          </div>
+          <div class="gi" data-cat="furn" data-r data-d="1">
+            <img src="design.jpeg" alt="Royal CNC carved bed" loading="lazy" />
+            <div class="gi-ov">
+              <div>
+                <h4>Royal Carved Bed</h4>
+                <span>CNC Furniture</span>
+              </div>
+            </div>
+          </div>
+          <div class="gi" data-cat="furn" data-r data-d="2">
+            <img
+              src="download__4_.jpeg"
+              alt="Ornate headboard carving"
+              loading="lazy"
+            />
+            <div class="gi-ov">
+              <div>
+                <h4>Ornate Headboard</h4>
+                <span>Wood Carving</span>
+              </div>
+            </div>
+          </div>
+          <div class="gi" data-cat="led" data-r data-d="3">
+            <img
+              src="12.jpeg"
+              alt="Shree Sharda Hospital sign"
+              loading="lazy"
+            />
+            <div class="gi-ov">
+              <div>
+                <h4>Hospital Acrylic Sign</h4>
+                <span>Custom Signage</span>
+              </div>
+            </div>
+          </div>
+          <div class="gi" data-cat="led" data-r data-d="1">
+            <img src="jamui.jpeg" alt="I Love Jamui LED sign" loading="lazy" />
+            <div class="gi-ov">
+              <div>
+                <h4>I Love Jamui</h4>
+                <span>Landmark LED</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lb" id="lb">
+      <button class="lb-x" id="lbX"><i class="fas fa-times"></i></button>
+      <img src="" alt="" id="lbImg" />
+    </div>
+
+    <!-- ════════════ LED BOARDS ════════════ -->
+    <section id="led">
+      <div class="wrap">
+        <div class="led-grid">
+          <!-- Images -->
+          <div class="led-imgs-wrap" data-r="l">
+            <div class="li-img span2">
+              <img
+                src="signboards.jpeg"
+                alt="Illuminated sign board wall"
+                loading="lazy"
+              />
+            </div>
+            <div class="li-img sq">
+              <img
+                src="signboard3.jpg"
+                alt="Colorful LED signs"
+                loading="lazy"
+              />
+            </div>
+            <div class="li-img sq">
+              <img src="11.webp" alt="Sign board samples" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- Text -->
+          <div data-r="r">
+            <div class="hline">
+              <div class="bar"></div>
+              <span>LED Sign Boards</span>
+            </div>
+            <h2 class="sec-h">
+              Signs That <span class="o">Glow</span> & Grow Your Brand
+            </h2>
+            <p class="sec-p">
+              We design and build LED sign boards that demand attention. From
+              small shop name plates to large illuminated display walls — all
+              custom made for you.
+            </p>
+
+            <div class="led-features">
+              <div class="lf">
+                <div class="lf-icon"><i class="fas fa-bolt"></i></div>
+                <div>
+                  <h4>Backlit Acrylic Letters</h4>
+                  <p>
+                    Premium 3D letters with LED backlight in all sizes, colors,
+                    and custom fonts. Perfect for shops and showrooms.
+                  </p>
+                </div>
+              </div>
+              <div class="lf">
+                <div class="lf-icon"><i class="fas fa-fire"></i></div>
+                <div>
+                  <h4>Neon Effect Boards</h4>
+                  <p>
+                    Eye-catching neon-style LED boards that glow brilliantly day
+                    and night. Weatherproof and energy efficient.
+                  </p>
+                </div>
+              </div>
+              <div class="lf">
+                <div class="lf-icon"><i class="fas fa-palette"></i></div>
+                <div>
+                  <h4>Custom Design & Branding</h4>
+                  <p>
+                    We design from scratch or work from your artwork — every
+                    sign is unique and tailored to your brand identity.
+                  </p>
+                </div>
+              </div>
+              <div class="lf">
+                <div class="lf-icon"><i class="fas fa-tools"></i></div>
+                <div>
+                  <h4>Installation & Service</h4>
+                  <p>
+                    Professional on-site installation across Jamui district,
+                    plus repair and maintenance of existing sign boards.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              style="
+                margin-top: 28px;
+                display: flex;
+                gap: 12px;
+                flex-wrap: wrap;
+              "
+            >
+              <a href="#contact" class="btn btn-orange"
+                ><i class="fas fa-paper-plane"></i> Order a Sign Board</a
+              >
+              <a
+                href="https://wa.me/917643090002?text=Namaste%20%F0%9F%99%8F%20I%20visited%20your%20website%20and%20I%27m%20interested%20in%20an%20LED%20Sign%20Board.%20Please%20help%20me%20with%20more%20details."
+                target="_blank"
+                class="btn btn-outline"
+                style="color: #25d366; border-color: #25d366"
+                ><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════ CNC WORK ════════════ -->
+    <section id="cnc">
+      <div class="wrap">
+        <div class="cnc-grid">
+          <!-- Text left -->
+          <div data-r="l">
+            <div class="hline">
+              <div class="bar"></div>
+              <span>CNC & Laser Work</span>
+            </div>
+            <h2 class="sec-h">
+              Precision <span class="g">Craftsmanship</span> in Every Cut
+            </h2>
+            <p class="sec-p">
+              Our LX-II-1325 CNC router and EVA-II laser cutter produce work of
+              extraordinary detail — from ornate royal furniture to intricate
+              decorative art and precise brand elements.
+            </p>
+            <div class="cnc-feat-grid">
+              <div class="cf" data-r data-d="1">
+                <div class="cf-icon"><i class="fas fa-chess-rook"></i></div>
+                <h4>CNC Wood Carving</h4>
+                <p>
+                  Intricate 3D carvings on wood — furniture panels, door
+                  designs, and wall art pieces.
+                </p>
+              </div>
+              <div class="cf" data-r data-d="2">
+                <div class="cf-icon"><i class="fas fa-cut"></i></div>
+                <h4>Laser Precision Cutting</h4>
+                <p>
+                  Ultra-fine laser cutting on acrylic, MDF, fabric, and thin
+                  metals — zero material waste.
+                </p>
+              </div>
+              <div class="cf" data-r data-d="3">
+                <div class="cf-icon">
+                  <i class="fas fa-drafting-compass"></i>
+                </div>
+                <h4>3D Photo Engraving</h4>
+                <p>
+                  Photo-realistic 3D engravings on wood and acrylic — perfect
+                  for gifts and memorials.
+                </p>
+              </div>
+              <div class="cf" data-r data-d="4">
+                <div class="cf-icon"><i class="fas fa-th-large"></i></div>
+                <h4>Decorative Panels</h4>
+                <p>
+                  Wall panels, privacy screens, and jali work with intricate
+                  floral and geometric patterns.
+                </p>
+              </div>
+            </div>
+            <div style="margin-top: 28px">
+              <a href="#contact" class="btn btn-gold"
+                ><i class="fas fa-ruler-combined"></i> Discuss Your Project</a
+              >
+            </div>
+          </div>
+
+          <!-- Images right -->
+          <div class="cnc-imgs" data-r="r">
+            <div class="ci tall">
+              <img
+                src="download__4_.jpeg"
+                alt="Royal ornate headboard CNC carved"
+                loading="lazy"
+              />
+            </div>
+            <div class="ci">
+              <img src="7.webp" alt="CNC machine at work" loading="lazy" />
+            </div>
+            <div class="ci">
+              <img
+                src="carbing.jpg"
+                alt="CNC carved wood piece"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════ PROCESS ════════════ -->
+    <section id="process">
+      <div class="wrap">
+        <div class="proc-head" data-r>
+          <div class="hline" style="justify-content: center">
+            <div class="bar"></div>
+            <span>How It Works</span>
+          </div>
+          <h2 class="sec-h">From <span class="o">Idea</span> to Reality</h2>
+          <p class="sec-p">
+            Our simple 4-step process ensures you get exactly what you imagined
+            — on time and within budget, every time.
+          </p>
+        </div>
+        <div class="proc-steps">
+          <div class="ps">
+            <div class="ps-num">01</div>
+            <div class="ps-circle"><i class="fas fa-comments"></i></div>
+            <h3>Consult & Design</h3>
+            <p>
+              Share your idea, reference images, or measurements. We create a
+              design tailored to your vision.
+            </p>
+          </div>
+          <div class="ps">
+            <div class="ps-num">02</div>
+            <div class="ps-circle"><i class="fas fa-file-invoice"></i></div>
+            <h3>Quote & Confirm</h3>
+            <p>
+              Transparent pricing, no hidden costs. We confirm details and begin
+              sourcing materials immediately.
+            </p>
+          </div>
+          <div class="ps">
+            <div class="ps-num">03</div>
+            <div class="ps-circle"><i class="fas fa-cogs"></i></div>
+            <h3>Craft & Manufacture</h3>
+            <p>
+              Our CNC machines and skilled team manufacture your order with
+              meticulous attention to detail.
+            </p>
+          </div>
+          <div class="ps">
+            <div class="ps-num">04</div>
+            <div class="ps-circle"><i class="fas fa-truck"></i></div>
+            <h3>Deliver & Install</h3>
+            <p>
+              We deliver and professionally install at your location. Your
+              satisfaction is guaranteed — always.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════ TESTIMONIALS ════════════ -->
+    <section id="testimonials">
+      <div class="wrap">
+        <div class="testi-head" data-r>
+          <div class="hline" style="justify-content: center">
+            <div class="bar"></div>
+            <span>Client Love</span>
+          </div>
+          <h2 class="sec-h">What Our <span class="g">Clients Say</span></h2>
+          <p class="sec-p">
+            Real feedback from happy businesses and families we've served across
+            Jamui and surrounding districts.
+          </p>
+        </div>
+        <div class="testi-grid">
+          <div class="tc" data-r data-d="1">
+            <div class="tc-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+            <p class="tc-text">
+              "The LED sign board they made for my mobile shop is absolutely
+              stunning. Every customer notices it. Quality is top class and the
+              price was very reasonable. Best investment for my shop!"
+            </p>
+            <div class="tc-author">
+              <div class="tc-av">RK</div>
+              <div>
+                <div class="tc-name">Ravi Kumar</div>
+                <div class="tc-loc">Mobile Shop Owner, Jamui</div>
+              </div>
+            </div>
+          </div>
+          <div class="tc" data-r data-d="2">
+            <div class="tc-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+            <p class="tc-text">
+              "Got a CNC carved bed from them — it's like a work of art! The
+              detailing is unbelievable. Sharvan bhai and his team are truly
+              skilled craftsmen. Highly recommended to everyone!"
+            </p>
+            <div class="tc-author">
+              <div class="tc-av">AS</div>
+              <div>
+                <div class="tc-name">Amit Singh</div>
+                <div class="tc-loc">Home Owner, Sikandra</div>
+              </div>
+            </div>
+          </div>
+          <div class="tc" data-r data-d="3">
+            <div class="tc-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+            <p class="tc-text">
+              "Beautiful name board for my clinic with acrylic letters and LED
+              lighting. Fast delivery, professional installation, and the price
+              was very competitive. 10 out of 10 — will order again!"
+            </p>
+            <div class="tc-author">
+              <div class="tc-av">DM</div>
+              <div>
+                <div class="tc-name">Dr. Mehra</div>
+                <div class="tc-loc">Clinic Owner, Jamui Town</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════ CONTACT ════════════ -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="contact-grid">
+          <!-- Info -->
+          <div class="ci-info" data-r="l">
+            <div class="hline">
+              <div class="bar"></div>
+              <span>Get In Touch</span>
+            </div>
+            <h2 class="sec-h">
+              Let's Build Something <span class="o">Great</span>
+            </h2>
+            <p class="sec-p">
+              Need a glowing sign board for your shop or stunning carved
+              furniture for your home? We're ready. Contact us for a free
+              consultation and quote.
+            </p>
+            <div class="c-img">
+              <img src="8.webp" alt="Our workshop office" loading="lazy" />
+            </div>
+            <div class="c-links">
+              <a href="tel:+917643090002" class="cl">
+                <i class="fas fa-phone-alt"></i> +91 76430 90002
+              </a>
+              <a href="tel:+918210283098" class="cl">
+                <i class="fas fa-phone-alt"></i> +91 82102 83098
+              </a>
+              <a
+                href="https://wa.me/917643090002?text=Namaste%20%F0%9F%99%8F%20I%20visited%20your%20website%20and%20I%27m%20interested%20in%20your%20services.%20Please%20help%20me%20with%20more%20details."
+                class="cl wa-link"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fab fa-whatsapp"></i> WhatsApp — +91 76430 90002
+              </a>
+              <a
+                href="https://maps.app.goo.gl/kMULUtEtxGPabpfV7"
+                class="cl"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fas fa-map-marker-alt"></i> Station Road, Near Vishnu
+                Bajaj, Jamui
+              </a>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div class="c-form" data-r="r">
+            <div class="c-form-title">
+              Request a <span style="color: var(--orange)">Free Quote</span>
+            </div>
+            <div class="c-form-sub">
+              Fill in the details below and we'll get back to you within hours.
+            </div>
+            <form id="cForm">
+              <div class="fg-row">
+                <div class="fg">
+                  <label>Full Name</label>
+                  <input type="text" placeholder="Your name" required />
+                </div>
+                <div class="fg">
+                  <label>Phone Number</label>
+                  <input type="tel" placeholder="+91 00000 00000" required />
+                </div>
+              </div>
+              <div class="fg">
+                <label>Service Needed</label>
+                <select>
+                  <option value="">— Select a service —</option>
+                  <option>LED Sign Board</option>
+                  <option>Laser Cutting / Engraving</option>
+                  <option>CNC Furniture Carving</option>
+                  <option>Acrylic 3D Letters / Branding</option>
+                  <option>3D Door Panels</option>
+                  <option>Premium Finishing</option>
+                  <option>Other / Custom</option>
+                </select>
+              </div>
+              <div class="fg">
+                <label>Project Details</label>
+                <textarea
+                  placeholder="Describe your project — size, design, quantity, delivery location..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="sbtn">
+                <i class="fas fa-paper-plane"></i> Send My Request
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════ FOOTER ════════════ -->
+    <footer>
+      <div class="wrap">
+        <div class="foot-grid">
+          <div class="foot-brand">
+            <a
+              href="#hero"
+              class="logo"
+              style="margin-bottom: 4px; display: inline-flex"
+            >
+              <img src="logo.png" alt="LSB Logo" class="logo-img" />
+              <div class="logo-name" style="margin-left: 12px">
+                <span class="top">Furniture House</span>
+                <span class="bot">& LED Sign Board</span>
+              </div>
+            </a>
+            <p>
+              Jamui's most trusted name in premium CNC furniture and LED sign
+              boards. Quality, creativity, and care since 2014.
+            </p>
+            <div class="foot-socials">
+              <a href="#" class="fsoc"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="fsoc"><i class="fab fa-instagram"></i></a>
+              <a
+                href="https://wa.me/917643090002?text=Namaste%20%F0%9F%99%8F%20I%20visited%20your%20website%20and%20I%27m%20interested%20in%20your%20services.%20Please%20help%20me."
+                class="fsoc"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+              <a href="#" class="fsoc"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="foot-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#led">LED Boards</a></li>
+              <li><a href="#cnc">CNC Work</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="foot-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#services">LED Sign Boards</a></li>
+              <li><a href="#services">Laser Cutting</a></li>
+              <li><a href="#services">CNC Carving</a></li>
+              <li><a href="#services">Acrylic Branding</a></li>
+              <li><a href="#services">Door Panels</a></li>
+              <li><a href="#contact">Free Consultation</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="foot-bottom">
+          <p>
+            © 2025 Furniture House & LED Sign Board, Jamui, Bihar. All rights
+            reserved.
+          </p>
+          <p>Made with <span class="heart">♥</span> for Jamui</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a
+      href="https://wa.me/917643090002?text=Namaste%20%F0%9F%99%8F%20I%20visited%20your%20website%20and%20I%27m%20interested%20in%20your%20services.%20Please%20help%20me%20with%20more%20details."
+      class="wa-float"
+      target="_blank"
+      rel="noopener"
+      aria-label="WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
+      <span class="wa-tip"
+        ><i
+          class="fab fa-whatsapp"
+          style="color: #25d366; margin-right: 6px"
+        ></i
+        >Chat on WhatsApp</span
+      >
+    </a>
+
+    <script>
+      /* ── NAVBAR ── */
+      const nav = document.getElementById("nav");
+      window.addEventListener(
+        "scroll",
+        () => nav.classList.toggle("stuck", scrollY > 55),
+        { passive: true },
+      );
+
+      /* ── HAMBURGER ── */
+      const ham = document.getElementById("ham");
+      const drawer = document.getElementById("mobDrawer");
+      ham.addEventListener("click", () => {
+        const open = drawer.classList.toggle("open");
+        ham.classList.toggle("open", open);
+        document.body.style.overflow = open ? "hidden" : "";
+      });
+      document.querySelectorAll(".mob-link").forEach((el) =>
+        el.addEventListener("click", () => {
+          drawer.classList.remove("open");
+          ham.classList.remove("open");
+          document.body.style.overflow = "";
+        }),
+      );
+
+      /* ── SCROLL REVEAL ── */
+      const allReveal = document.querySelectorAll("[data-r]");
+      const obs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("on");
+              obs.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.08, rootMargin: "0px 0px -36px 0px" },
+      );
+      allReveal.forEach((el) => obs.observe(el));
+
+      /* ── PROCESS STEPS REVEAL ── */
+      const steps = document.querySelectorAll(".ps");
+      const sObs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("on");
+              sObs.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+      steps.forEach((s, i) => {
+        s.style.opacity = "0";
+        s.style.transform = "translateY(28px)";
+        s.style.transition = `opacity .7s ease ${i * 0.15}s, transform .7s ease ${i * 0.15}s`;
+        sObs.observe(s);
+      });
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".ps.on").forEach((s) => {
+          s.style.opacity = "1";
+          s.style.transform = "none";
+        });
+      });
+
+      /* ── GALLERY FILTERS ── */
+      const fBtns = document.querySelectorAll(".f-btn");
+      const gItems = document.querySelectorAll(".gi");
+      fBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          fBtns.forEach((b) => b.classList.remove("act"));
+          btn.classList.add("act");
+          const f = btn.dataset.f;
+          gItems.forEach((gi) => {
+            gi.style.display =
+              f === "all" || gi.dataset.cat === f ? "" : "none";
+          });
+        });
+      });
+
+      /* ── LIGHTBOX ── */
+      const lb = document.getElementById("lb");
+      const lbImg = document.getElementById("lbImg");
+      const lbX = document.getElementById("lbX");
+      document.querySelectorAll(".gi img").forEach((img) => {
+        img.addEventListener("click", () => {
+          lbImg.src = img.src;
+          lbImg.alt = img.alt;
+          lb.classList.add("show");
+          document.body.style.overflow = "hidden";
+        });
+      });
+      function closeLB() {
+        lb.classList.remove("show");
+        document.body.style.overflow = "";
+      }
+      lbX.addEventListener("click", closeLB);
+      lb.addEventListener("click", (e) => {
+        if (e.target === lb) closeLB();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeLB();
+      });
+
+      /* ── CONTACT FORM → WHATSAPP ── */
+      document.getElementById("cForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = this.querySelector('input[type="text"]').value.trim();
+        const phone = this.querySelector('input[type="tel"]').value.trim();
+        const service = this.querySelector("select").value || "Not specified";
+        const details = this.querySelector("textarea").value.trim();
+
+        const msg =
+          `🙏 *New Enquiry – LSB Furniture House & LED Sign Board*\n\n` +
+          `👤 *Name:* ${name}\n` +
+          `📞 *Phone:* ${phone}\n` +
+          `🛠️ *Service Needed:* ${service}\n` +
+          `📝 *Project Details:*\n${details}\n\n` +
+          `_Sent via website contact form_`;
+
+        const waURL = `https://wa.me/917643090002?text=${encodeURIComponent(msg)}`;
+
+        /* ✅ Open WhatsApp by clicking an <a> tag synchronously within the user gesture.
+     This is NEVER blocked by popup-blockers on Android, iOS, or desktop.
+     IMPORTANT: must NOT be inside a setTimeout — must stay in this gesture context. */
+        const link = document.createElement("a");
+        link.href = waURL;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        /* Button feedback (UI only — safe to delay) */
+        const btn = this.querySelector(".sbtn");
+        btn.innerHTML =
+          '<i class="fas fa-check-circle"></i> Message Sent to WhatsApp!';
+        btn.style.background = "linear-gradient(135deg,#18a34a,#0f7a38)";
+        btn.style.boxShadow = "0 10px 36px rgba(24,163,74,.4)";
+        btn.disabled = true;
+
+        setTimeout(() => {
+          btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send My Request';
+          btn.style.background = "";
+          btn.style.boxShadow = "";
+          btn.disabled = false;
+          this.reset();
+        }, 4000);
+      });
+
+      /* ── SMOOTH SCROLL ── */
+      document.querySelectorAll('a[href^="#"]').forEach((a) => {
+        a.addEventListener("click", (e) => {
+          const t = document.querySelector(a.getAttribute("href"));
+          if (t) {
+            e.preventDefault();
+            t.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
